@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var inputArray = [Double]()
     var tempResult = 0.0
     var operation = ""
-
+    var history = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,7 @@ class ViewController: UIViewController {
                     factorial = factorial * i
             }
             display.text = String(factorial)
+            history.append("\(inputArray[0]) \(operation) = \(factorial)")
             MiddleOfTyping = false
             factorial = 1
             inputArray = [Double]()
@@ -73,22 +74,35 @@ class ViewController: UIViewController {
         switch operation {
             case "+":
                tempResult = inputArray[0] + inputArray[1]
+               history.append("\(inputArray[0]) \(operation) \(inputArray[1]) = \(tempResult)")
             case "-":
                tempResult = inputArray[0] - inputArray[1]
+               history.append("\(inputArray[0]) \(operation) \(inputArray[1]) = \(tempResult)")
             case "*":
                 tempResult = inputArray[0] * inputArray[1]
+                history.append("\(inputArray[0]) \(operation) \(inputArray[1]) = \(tempResult)")
             case "/":
                 tempResult = inputArray[0] / inputArray[1]
+                history.append("\(inputArray[0]) \(operation) \(inputArray[1]) = \(tempResult)")
             case "%":
                 tempResult = Double((Int)(inputArray[0]) % (Int)(inputArray[1]))
+                history.append("\(inputArray[0]) \(operation) \(inputArray[1]) = \(tempResult)")
             case "Count":
                 tempResult = Double(inputArray.count)
+                for number in inputArray {
+                    history.append("\(number)  ")
+                }
+                history.append("count = \(tempResult)")
             case "Avg":
                 var temp = 0.0
                 for i in 1...inputArray.count {
                     temp = temp + inputArray[i-1]
                 }
                 tempResult = Double(temp / (Double)(inputArray.count))
+                for i in inputArray {
+                    history.append("\(i)  ")
+                }
+                history.append("average = \(tempResult)")
             default:
                 break
         }
@@ -100,6 +114,10 @@ class ViewController: UIViewController {
         operation = ""
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let History = segue.destination as! HistoryViewController
+        History.history = history;
+    }
 
 }
 

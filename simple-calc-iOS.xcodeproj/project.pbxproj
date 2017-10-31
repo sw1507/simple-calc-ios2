@@ -12,6 +12,7 @@
 		288955341FA7FA0000176BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288955321FA7FA0000176BCD /* Main.storyboard */; };
 		288955361FA7FA0000176BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288955351FA7FA0000176BCD /* Assets.xcassets */; };
 		288955391FA7FA0000176BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288955371FA7FA0000176BCD /* LaunchScreen.storyboard */; };
+		374BDA0B1FA854CC00DF0AAE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BDA0A1FA854CC00DF0AAE /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		288955351FA7FA0000176BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		288955381FA7FA0000176BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2889553A1FA7FA0000176BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374BDA0A1FA854CC00DF0AAE /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				2889552E1FA7FA0000176BCD /* AppDelegate.swift */,
 				288955301FA7FA0000176BCD /* ViewController.swift */,
 				288955321FA7FA0000176BCD /* Main.storyboard */,
+				374BDA0A1FA854CC00DF0AAE /* HistoryViewController.swift */,
 				288955351FA7FA0000176BCD /* Assets.xcassets */,
 				288955371FA7FA0000176BCD /* LaunchScreen.storyboard */,
 				2889553A1FA7FA0000176BCD /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374BDA0B1FA854CC00DF0AAE /* HistoryViewController.swift in Sources */,
 				288955311FA7FA0000176BCD /* ViewController.swift in Sources */,
 				2889552F1FA7FA0000176BCD /* AppDelegate.swift in Sources */,
 			);
@@ -306,6 +310,7 @@
 				2889553F1FA7FA0000176BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
